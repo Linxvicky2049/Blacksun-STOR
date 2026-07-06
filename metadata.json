@@ -1,6 +1,0 @@
-{
-  "name": "Black Sun Store",
-  "description": "Premium Architectural Streetwear Store with high-end, technical, dark minimalism, and an Obsidian Nebula aesthetic.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
