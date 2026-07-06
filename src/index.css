@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom visual styles */
+.text-glow-gold {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+.liquid-gradient-hero {
+  background: linear-gradient(135deg, #131313 0%, #1a1525 50%, #101e1b 100%);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* High-End Tech Glitch color shift keyframes */
+@keyframes tech-glitch {
+  0%, 85%, 100% {
+    color: #a1a1aa; /* zinc-400 */
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  88% {
+    color: #ef4444; /* red-500 */
+    text-shadow: -2px 0 rgba(34, 211, 238, 0.7), 1px 0 rgba(212, 175, 55, 0.7);
+    transform: translate(-1px, 0.5px);
+  }
+  91% {
+    color: #22d3ee; /* cyan-400 */
+    text-shadow: 2px -1px rgba(239, 68, 68, 0.7), -1px 2px rgba(212, 175, 55, 0.7);
+    transform: translate(1px, -0.5px);
+  }
+  94% {
+    color: #D4AF37; /* gold */
+    text-shadow: -1px 1px rgba(34, 211, 238, 0.7), 2px 1px rgba(239, 68, 68, 0.7);
+    transform: translate(-0.5px, -1px);
+  }
+  97% {
+    color: #f43f5e; /* rose-500 */
+    text-shadow: 1.5px -1.5px rgba(239, 68, 68, 0.7), -1.5px -1px rgba(34, 211, 238, 0.7);
+    transform: translate(0.5px, 0.5px);
+  }
+}
+
+/* Secondary glitch for subtle ambient shift */
+@keyframes ambient-glitch {
+  0%, 75%, 100% {
+    color: #71717a; /* zinc-500 */
+    opacity: 0.6;
+  }
+  78% {
+    color: #ef4444;
+    opacity: 0.9;
+  }
+  82% {
+    color: #22d3ee;
+    opacity: 0.9;
+  }
+  86% {
+    color: #D4AF37;
+    opacity: 0.9;
+  }
+}
+
+.animate-glitch-text {
+  animation: tech-glitch 5s infinite steps(1);
+}
+
+.animate-glitch-ambient {
+  animation: ambient-glitch 4s infinite steps(1);
+}
+
+/* Custom Scrollbar for Obsidian aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f2ca50;
+}
